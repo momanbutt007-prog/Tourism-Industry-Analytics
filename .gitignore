@@ -1,0 +1,50 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Streamlit ---
+.streamlit/
+
+# --- Environment / secrets ---
+.env
+.env.*
+*.key
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor/IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- Data (uncomment if raw/cleaned data should NOT be committed) ---
+# data/raw/*
+# data/cleaned/*
+
+# --- Logs ---
+*.log
+
+# --- Distribution / packaging ---
+*.egg
