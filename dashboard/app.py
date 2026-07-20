@@ -1,12 +1,18 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 st.set_page_config(page_title="Tourism Industry Analytics Dashboard", layout="wide")
 
+# Resolve the data path relative to this script's location, not the
+# current working directory, so it works no matter where you launch from.
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "..", "data", "cleaned", "cleaned_tourism_data.csv")
+
 @st.cache_data
 def load_data():
-    return pd.read_csv("../data/cleaned/cleaned_tourism_data.csv")
+    return pd.read_csv(DATA_PATH)
 
 df = load_data()
 
